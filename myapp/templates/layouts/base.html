@@ -1,25 +1,38 @@
-<nav style="display: flex;">
-  <ul>
-    <li>
-      <a href="{% url 'index' %}">Home</a>
-    </li>
-    <li>
-      <a href="{% url 'about' %}">About</a>
-    </li>
-    <li>
-      <a href="{% url 'projects' %}">Projects</a>
-    </li>
-    <li>
-      <a href="{% url 'tasks' %}">Tasks</a>
-    </li>
-    <li>
-      <a href="{% url 'create_task' %}">Create task</a>
-    </li>
-    <li>
-      <a href="{% url 'create_project' %}">Create project</a>
-    </li>
-  </ul>
-</nav>
+{% load static %}
 
-{% block content %}
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'styles/main.css' %}">
+  <title>Django Project</title>
+</head>
+<body>
+  <nav style="display: flex;">
+    <ul>
+      <li>
+        <a href="{% url 'index' %}">Home</a>
+      </li>
+      <li>
+        <a href="{% url 'about' %}">About</a>
+      </li>
+      <li>
+        <a href="{% url 'projects' %}">Projects</a>
+      </li>
+      <li>
+        <a href="{% url 'tasks' %}">Tasks</a>
+      </li>
+      <li>
+        <a href="{% url 'create_task' %}">Create task</a>
+      </li>
+      <li>
+        <a href="{% url 'create_project' %}">Create project</a>
+      </li>
+    </ul>
+  </nav>
+  
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
