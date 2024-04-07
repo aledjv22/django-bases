@@ -31,7 +31,7 @@ body {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
 
 .card {
@@ -40,4 +40,11 @@ body {
   padding: 10px;
   margin: 2px;
   font-size: large;
+}
+
+.input {
+  background: wheat;
+  padding: 10px;
+  text-align: center;
+  display: block;
 }
