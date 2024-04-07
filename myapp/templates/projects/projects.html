@@ -3,11 +3,14 @@
 {% block content %}
 <h1>Projects</h1>
 
-<ul style="font-size: large; color: crimson;">
-  <!-- Bucle for, recorre los elementos de projects -->
-  {% for project in projects %} 
-    <li>{{ project.name }}</li>
-  {% endfor %}
-  <!-- Fin del bucle for -->
-</ul>
+<!-- Bucle for, recorre los elementos de projects -->
+{% for project in projects %} 
+  <article class="card">
+    <a href="{% url 'project_detail' project.id %}">
+      {{ project.name }}
+    </a>
+  </article>
+{% endfor %}
+<!-- Fin del bucle for -->
+
 {% endblock %}

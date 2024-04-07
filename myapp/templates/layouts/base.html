@@ -9,7 +9,7 @@
   <title>Django Project</title>
 </head>
 <body>
-  <nav style="display: flex;">
+  <nav class="navbar">
     <ul>
       <li>
         <a href="{% url 'index' %}">Home</a>
@@ -32,7 +32,9 @@
     </ul>
   </nav>
   
-  {% block content %}
-  {% endblock %}
+  <main class="container">
+    {% block content %}
+    {% endblock %}
+  </main>
 </body>
 </html>
