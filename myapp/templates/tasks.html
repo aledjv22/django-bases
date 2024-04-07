@@ -1,14 +1,39 @@
 <h1>Tasks</h1>
 
-<div style="font-size: large; color: crimson;">
+<div style="font-size: large; color: black;">
   <!-- Bucle for, recorre los elementos de tasks -->
   {% for task in tasks %} 
     <div>
-      <h2>{{ task.title }}</h2>
+      <h2>
+        <!-- Estamos usando la sintaxis de jinja 2-->
+        {%if task.done %} 
+        ✅
+        {% else %}
+        ⏲
+        {% endif %}
+        {{ task.title }}
+      </h2>
+
+      {# Estos comentarios de jinja 2 no se ven en el navegador
+        Los que si se ven son los de html <!-- -->
+        {% if task.done %}
+          <p style="color: green;">
+            Tarea Realizada
+          </p>
+        {% else %}
+          <p style="color: red;">
+            Tarea Pendiente
+          </p>
+        {% endif %} 
+      #}
+
       <p>{{ task.description }}</p>
       <p>Project: {{ task.project.name }}</p>
       <button type="button">
         Delete
+      </button>
+      <button type="button">
+        ✅ Done
       </button>
     </div>
   {% endfor %}
