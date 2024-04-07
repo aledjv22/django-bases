@@ -17,8 +17,8 @@
         {{ task.title }}
       </h2>
 
-      {# Estos comentarios de jinja 2 no se ven en el navegador
-        Los que si se ven son los de html <!-- -->
+      <!-- {# Estos comentarios de jinja 2 no se ven en el navegador 
+        Los que si se ven son los de html
         {% if task.done %}
           <p style="color: green;">
             Tarea Realizada
@@ -28,7 +28,7 @@
             Tarea Pendiente
           </p>
         {% endif %} 
-      #}
+      #} -->
 
       <p>{{ task.description }}</p>
       <p>Project: {{ task.project.name }}</p>
