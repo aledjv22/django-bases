@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>About</h1>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam numquam assumenda doloribus deleniti voluptatum quas voluptate rerum provident, sit fugit laboriosam dicta incidunt cum a unde, aspernatur repudiandae porro necessitatibus natus aliquid totam voluptatem expedita! Laborum placeat maxime blanditiis aliquid adipisci incidunt exercitationem quo sint illum, error obcaecati dolores non at labore vitae delectus nostrum quisquam, unde veritatis facilis numquam architecto sunt porro? Placeat autem reiciendis possimus voluptas vel, aliquid reprehenderit iure minima animi labore praesentium est voluptate voluptatum sapiente quidem eos eligendi officiis, laborum odio accusamus magni repellat inventore non. Quibusdam a, nobis praesentium quia laborum expedita magni reprehenderit!</p>
+{% extends 'layouts/base.html' %}
 
-  <p>Website created by {{username}}</p>
-</body>
-</html>
+{% block content %}
+<h1>About</h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam numquam assumenda doloribus deleniti voluptatum quas voluptate rerum provident, sit fugit laboriosam dicta incidunt cum a unde, aspernatur repudiandae porro necessitatibus natus aliquid totam voluptatem expedita! Laborum placeat maxime blanditiis aliquid adipisci incidunt exercitationem quo sint illum, error obcaecati dolores non at labore vitae delectus nostrum quisquam, unde veritatis facilis numquam architecto sunt porro? Placeat autem reiciendis possimus voluptas vel, aliquid reprehenderit iure minima animi labore praesentium est voluptate voluptatum sapiente quidem eos eligendi officiis, laborum odio accusamus magni repellat inventore non. Quibusdam a, nobis praesentium quia laborum expedita magni reprehenderit!</p>
+
+<p>Website created by {{username}}</p>
+{% endblock %}
