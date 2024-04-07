@@ -45,7 +45,7 @@ def create_task(request):
     description=request.POST['description'], 
     project_id=1)
 
-    return redirect('/tasks') # Redirige a la vista tasks
+    return redirect('tasks') # Redirige a la vista tasks
 
 def create_project(request):
   if request.method == 'GET':
@@ -54,5 +54,5 @@ def create_project(request):
   })
   else:
     Project.objects.create(name=request.POST['name'])
-    return redirect('/projects') # Redirige a la vista projects
+    return redirect('projects') # Redirige a la vista projects
   
