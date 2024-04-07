@@ -1,3 +1,9 @@
 <h1>Projects</h1>
 
-<p>{{projects}}</p>
+<ul style="font-size: large; color: crimson;">
+  <!-- Bucle for, recorre los elementos de projects -->
+  {% for project in projects %} 
+    <li>{{ project.name }}</li>
+  {% endfor %}
+  <!-- Fin del bucle for -->
+</ul>

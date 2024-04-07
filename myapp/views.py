@@ -21,7 +21,7 @@ def hello(request, username):
 
 def projects(request):
   # projects = list(Project.objects.values())
-  projects = Project.objects.all()
+  projects = Project.objects.all() # Devuelve todos los objetos de la tabla
   return render(request, 'projects.html', {
     'projects': projects,
   })
@@ -29,4 +29,7 @@ def projects(request):
 def tasks(request):
   # task = Task.objects.get(id=id) # Asi sería sin una buena vista del 404
   # task = get_object_or_404(Task, id=id)
-  return render(request, 'tasks.html')
+  tasks = Task.objects.all()
+  return render(request, 'tasks.html', {
+    'tasks': tasks,
+  })
